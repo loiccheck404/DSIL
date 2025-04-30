@@ -115,9 +115,12 @@ nav {
   transition: all 0.3s ease;
 }
 
-.tabs li a:hover,
 .tabs li a.active {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tabs li a:hover {
+  background-color: rgba(255, 0, 255, 0.9);
 }
 
 .hero {
