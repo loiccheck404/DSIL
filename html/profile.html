@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile - Mr Trappy's</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-top">
+          <a href="#" class="logo">Mr Trappy's</a>
+          <div class="header-buttons">
+            <a href="#" id="loginbtn" class="btn btn-outline">Logout</a>
+            <a href="#" id="cartbtn" class="cart-btn">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cart-badge" class="cart-badge">0</span>
+            </a>
+            <a href="#" id="orderbtn" class="btn btn-primary">Order Now</a>
+          </div>
+        </div>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Search products..." />
+          <button>🔍</button>
+        </div>
+
+        <nav>
+          <ul class="tabs">
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Pre-rolls</a></li>
+            <li><a href="#">Pharma</a></li>
+            <li><a href="#">Flower</a></li>
+            <li><a href="#">Vapes</a></li>
+            <li><a href="#">Edibles</a></li>
+            <li><a href="#">Tropical</a></li>
+            <li><a href="#">Concentrate</a></li>
+            <li><a href="#">Tinctures</a></li>
+            <li><a href="#">Topicals</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">CBD</a></li>
+            <li><a href="#">Delta-8</a></li>
+            <li><a href="#">Capsules</a></li>
+            <li><a href="#">Beverages</a></li>
+            <li><a href="#">Extracts</a></li>
+            <li><a href="#">Disposables</a></li>
+            <li><a href="#">Oils</a></li>
+            <li><a href="#">Gummies</a></li>
+            <li><a href="#">Seeds</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="profile-container container">
+      <div class="profile-header">
+        <div class="profile-avatar">
+          <img src="/api/placeholder/150/150" alt="Profile Picture" />
+          <div class="edit-avatar">
+            <i class="fas fa-camera"></i>
+          </div>
+        </div>
+        <div class="profile-info">
+          <h1>John Doe</h1>
+          <p>Member since: March 2025</p>
+          <div class="loyalty-badge">
+            <i class="fas fa-crown"></i> Gold Member
+          </div>
+          <p class="loyalty-points"><i class="fas fa-star"></i> 1,250 Points</p>
+        </div>
+      </div>
+
+      <div class="profile-tabs">
+        <button class="profile-tab active" data-tab="personal-info">
+          Personal Info
+        </button>
+        <button class="profile-tab" data-tab="orders">Orders</button>
+        <button class="profile-tab" data-tab="favorites">Favorites</button>
+        <button class="profile-tab" data-tab="preferences">Preferences</button>
+        <button class="profile-tab" data-tab="rewards">Rewards</button>
+      </div>
+
+      <div class="profile-content">
+        <!-- Personal Info Tab -->
+        <div class="tab-content active" id="personal-info">
+          <h2>Personal Information</h2>
+          <form class="profile-form">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" value="John Doe" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="john.doe@example.com" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" value="(555) 123-4567" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" value="1990-05-15" />
+            </div>
+            <h3>Shipping Address</h3>
+            <div class="form-group">
+              <label for="address">Street Address</label>
+              <input type="text" id="address" value="123 Cannabis Ave" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" value="Portland" />
+              </div>
+              <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" value="Oregon" />
+              </div>
+              <div class="form-group">
+                <label for="zip">ZIP</label>
+                <input type="text" id="zip" value="97201" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="id-verification">ID Verification</label>
+              <div class="verification-status verified">
+                <i class="fas fa-check-circle"></i> Verified
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </form>
+        </div>
+
+        <!-- Orders Tab -->
+        <div class="tab-content" id="orders">
+          <h2>Order History</h2>
+          <div class="order-filters">
+            <input type="text" placeholder="Search orders..." />
+            <select name="filter">
+              <option value="all">All Orders</option>
+              <option value="processing">Processing</option>
+              <option value="shipped">Shipped</option>
+              <option value="delivered">Delivered</option>
+            </select>
+          </div>
+          <div class="orders-list">
+            <div class="order-card">
+              <div class="order-header">
+                <div class="order-id">Order #MT25789</div>
+                <div class="order-date">April 28, 2025</div>
+                <div class="order-status delivered">Delivered</div>
+              </div>
+              <div class="order-items">
+                <div class="order-item">
+                  <img src="/api/placeholder/60/60" alt="Product" />
+                  <div class="item-details">
+                    <div class="item-name">CBD Pain Relief Capsules</div>
+                    <div class="item-meta">30 capsules | $45.00</div>
+                  </div>
+                  <div class="item-quantity">Qty: 1</div>
+                </div>
+                <div class="order-item">
+                  <img src="/api/placeholder/60/60" alt="Product" />
+                  <div class="item-details">
+                    <div class="item-name">Hybrid Cartridge</div>
+                    <div class="item-meta">1g | $40.00</div>
+                  </div>
+                  <div class="item-quantity">Qty: 2</div>
+                </div>
+              </div>
+              <div class="order-footer">
+                <div class="order-total">Total: $125.00</div>
+                <div class="order-actions">
+                  <button class="btn btn-outline">Track Order</button>
+                  <button class="btn btn-primary">Reorder</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-card">
+              <div class="order-header">
+                <div class="order-id">Order #MT25654</div>
+                <div class="order-date">April 15, 2025</div>
+                <div class="order-status delivered">Delivered</div>
+              </div>
+              <div class="order-items">
+                <div class="order-item">
+                  <img src="/api/placeholder/60/60" alt="Product" />
+                  <div class="item-details">
+                    <div class="item-name">Blue Dream</div>
+                    <div class="item-meta">3.5g | $55.00</div>
+                  </div>
+                  <div class="item-quantity">Qty: 1</div>
+                </div>
+                <div class="order-item">
+                  <img src="/api/placeholder/60/60" alt="Product" />
+                  <div class="item-details">
+                    <div class="item-name">Glass Pipe</div>
+                    <div class="item-meta">4 inch | $35.00</div>
+                  </div>
+                  <div class="item-quantity">Qty: 1</div>
+                </div>
+              </div>
+              <div class="order-footer">
+                <div class="order-total">Total: $90.00</div>
+                <div class="order-actions">
+                  <button class="btn btn-outline">Track Order</button>
+                  <button class="btn btn-primary">Reorder</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-card">
+              <div class="order-header">
+                <div class="order-id">Order #MT25432</div>
+                <div class="order-date">March 30, 2025</div>
+                <div class="order-status delivered">Delivered</div>
+              </div>
+              <div class="order-items">
+                <div class="order-item">
+                  <img src="/api/placeholder/60/60" alt="Product" />
+                  <div class="item-details">
+                    <div class="item-name">THC Gummies</div>
+                    <div class="item-meta">10 pieces | $30.00</div>
+                  </div>
+                  <div class="item-quantity">Qty: 2</div>
+                </div>
+              </div>
+              <div class="order-footer">
+                <div class="order-total">Total: $60.00</div>
+                <div class="order-actions">
+                  <button class="btn btn-outline">Track Order</button>
+                  <button class="btn btn-primary">Reorder</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="show-more-btn">Show More Orders</button>
+        </div>
+
+        <!-- Favorites Tab -->
+        <div class="tab-content" id="favorites">
+          <h2>My Favorites</h2>
+          <div class="favorites-grid">
+            <div class="product-card">
+              <div class="favorite-icon active">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img src="/api/placeholder/200/150" alt="Product Image" />
+              </div>
+              <div class="product-info">
+                <div class="product-category">Flower</div>
+                <h3 class="product-title">Blue Dream</h3>
+                <div class="product-price">$55.00</div>
+                <div class="product-meta">
+                  <span>THC: 24%</span>
+                  <span>3.5g</span>
+                </div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite-icon active">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img src="/api/placeholder/200/150" alt="Product Image" />
+              </div>
+              <div class="product-info">
+                <div class="product-category">Vape</div>
+                <h3 class="product-title">Hybrid Cartridge</h3>
+                <div class="product-price">$40.00</div>
+                <div class="product-meta">
+                  <span>THC: 85%</span>
+                  <span>1g</span>
+                </div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite-icon active">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img src="/api/placeholder/200/150" alt="Product Image" />
+              </div>
+              <div class="product-info">
+                <div class="product-category">Pharma</div>
+                <h3 class="product-title">CBD Pain Relief Capsules</h3>
+                <div class="product-price">$45.00</div>
+                <div class="product-meta">
+                  <span>30mg CBD</span>
+                  <span>30 capsules</span>
+                </div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite-icon active">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="product-image">
+                <img src="/api/placeholder/200/150" alt="Product Image" />
+              </div>
+              <div class="product-info">
+                <div class="product-category">Edible</div>
+                <h3 class="product-title">THC Gummies</h3>
+                <div class="product-price">$30.00</div>
+                <div class="product-meta">
+                  <span>10mg Each</span>
+                  <span>10 pieces</span>
+                </div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preferences Tab -->
+        <div class="tab-content" id="preferences">
+          <h2>My Preferences</h2>
+          <form class="profile-form">
+            <h3>Product Preferences</h3>
+            <div class="preferences-group">
+              <p>Preferred Categories</p>
+              <div class="preference-checkboxes">
+                <label><input type="checkbox" checked /> Flower</label>
+                <label><input type="checkbox" checked /> Vapes</label>
+                <label><input type="checkbox" checked /> Edibles</label>
+                <label><input type="checkbox" /> Pre-rolls</label>
+                <label><input type="checkbox" checked /> Pharma</label>
+                <label><input type="checkbox" /> Concentrate</label>
+                <label><input type="checkbox" /> Tinctures</label>
+                <label><input type="checkbox" /> Accessories</label>
+              </div>
+            </div>
+
+            <div class="preferences-group">
+              <p>Desired Effects</p>
+              <div class="preference-checkboxes">
+                <label><input type="checkbox" checked /> Relaxation</label>
+                <label><input type="checkbox" checked /> Pain Relief</label>
+                <label><input type="checkbox" /> Energy</label>
+                <label><input type="checkbox" checked /> Sleep Aid</label>
+                <label><input type="checkbox" /> Creativity</label>
+                <label><input type="checkbox" /> Focus</label>
+                <label><input type="checkbox" /> Mood Enhancement</label>
+                <label><input type="checkbox" /> Appetite</label>
+              </div>
+            </div>
+
+            <div class="preferences-group">
+              <p>THC/CBD Preference</p>
+              <div class="slider-container">
+                <span>High CBD</span>
+                <input type="range" min="1" max="5" value="3" class="slider" />
+                <span>High THC</span>
+              </div>
+            </div>
+
+            <h3>Communication Preferences</h3>
+            <div class="preferences-group">
+              <p>Email Notifications</p>
+              <div class="preference-toggle-group">
+                <div class="preference-toggle">
+                  <span>Order Updates</span>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                <div class="preference-toggle">
+                  <span>Special Offers</span>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                <div class="preference-toggle">
+                  <span>New Products</span>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                <div class="preference-toggle">
+                  <span>Educational Content</span>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Save Preferences
+            </button>
+          </form>
+        </div>
+
+        <!-- Rewards Tab -->
+        <div class="tab-content" id="rewards">
+          <h2>My Rewards</h2>
+
+          <div class="rewards-summary">
+            <div class="reward-level">
+              <div class="level-icon gold">
+                <i class="fas fa-crown"></i>
+              </div>
+              <div class="level-info">
+                <h3>Gold Member</h3>
+                <div class="level-progress">
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 75%"></div>
+                  </div>
+                  <span>1,250 / 2,000 points for Platinum</span>
+                </div>
+              </div>
+            </div>
+            <div class="points-balance">
+              <span class="points-value">1,250</span>
+              <span class="points-label">Available Points</span>
+            </div>
+          </div>
+
+          <h3>Available Rewards</h3>
+          <div class="rewards-grid">
+            <div class="reward-card">
+              <div class="reward-icon">
+                <i class="fas fa-percentage"></i>
+              </div>
+              <div class="reward-info">
+                <h4>15% Off Next Order</h4>
+                <p>Use your discount on any purchase</p>
+                <div class="reward-cost">300 points</div>
+              </div>
+              <button class="btn btn-outline">Redeem</button>
+            </div>
+
+            <div class="reward-card">
+              <div class="reward-icon">
+                <i class="fas fa-shipping-fast"></i>
+              </div>
+              <div class="reward-info">
+                <h4>Free Shipping</h4>
+                <p>Free shipping on your next order</p>
+                <div class="reward-cost">150 points</div>
+              </div>
+              <button class="btn btn-outline">Redeem</button>
+            </div>
+
+            <div class="reward-card">
+              <div class="reward-icon">
+                <i class="fas fa-gift"></i>
+              </div>
+              <div class="reward-info">
+                <h4>Free Pre-roll</h4>
+                <p>Get a free pre-roll with your next purchase</p>
+                <div class="reward-cost">200 points</div>
+              </div>
+              <button class="btn btn-outline">Redeem</button>
+            </div>
+
+            <div class="reward-card">
+              <div class="reward-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div class="reward-info">
+                <h4>Free Edible</h4>
+                <p>Choose one free edible up to $15 value</p>
+                <div class="reward-cost">400 points</div>
+              </div>
+              <button class="btn btn-outline">Redeem</button>
+            </div>
+          </div>
+
+          <h3>Point History</h3>
+          <div class="points-history">
+            <div class="history-item">
+              <div class="history-date">May 2, 2025</div>
+              <div class="history-description">Order #MT25789</div>
+              <div class="history-points earned">+125 points</div>
+            </div>
+            <div class="history-item">
+              <div class="history-date">April 20, 2025</div>
+              <div class="history-description">Reward Redemption - 15% Off</div>
+              <div class="history-points spent">-300 points</div>
+            </div>
+            <div class="history-item">
+              <div class="history-date">April 15, 2025</div>
+              <div class="history-description">Order #MT25654</div>
+              <div class="history-points earned">+90 points</div>
+            </div>
+            <div class="history-item">
+              <div class="history-date">March 30, 2025</div>
+              <div class="history-description">Order #MT25432</div>
+              <div class="history-points earned">+60 points</div>
+            </div>
+            <div class="history-item">
+              <div class="history-date">March 17, 2025</div>
+              <div class="history-description">Birthday Bonus</div>
+              <div class="history-points earned">+100 points</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-top">
+        <p>Crafted with passion | Est. 2025</p>
+      </div>
+      <div class="footer-main">
+        <div class="footer-column">
+          <img src="logo.png" alt="Logo" class="footer-logo" />
+          <p class="tagline">Empowering Your Vision</p>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Stay in the Loop</h4>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2025 YourCompanyName. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>
