@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Animation transition duration - 5 seconds
-  const ANIMATION_DURATION = 1000;
+  const ANIMATION_DURATION = 500;
   const ANIMATION_STEP_DELAY = 100; // Delay between each card animation
 
   // Add CSS for slide animations to the document head

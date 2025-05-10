@@ -133,7 +133,7 @@ nav {
 
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/api/placeholder/1200/400");
+    url("../pics/dsp1.jpeg");
   background-size: cover;
   background-position: center;
   color: var(--text-light);
