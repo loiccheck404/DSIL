@@ -131,6 +131,33 @@ nav {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Enhanced Hover Effects */
+.tabs li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Active State - when clicking */
+.tabs li a:active {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+/* Current/Selected Tab Enhanced */
+.tabs li a.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--accent-color);
+  border-bottom: 3px solid var(--accent-color);
+}
+
+/* Maintain the active state styles even on hover */
+.tabs li a.active:hover {
+  border-bottom: 3px solid var(--accent-color);
+}
+
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../pics/dsp1.jpeg");
