@@ -15,6 +15,7 @@ const authRoutes = require("./src/routes/auth");
 const productRoutes = require("./src/routes/products");
 const cartRoutes = require("./src/routes/cart");
 const orderRoutes = require("./src/routes/orders");
+const helloRoutes = require("./src/routes/hello");
 
 // Import middleware
 const errorHandler = require("./src/middlewares/error");
@@ -28,17 +29,16 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors());
+
+// CORS configuration
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || "http://localhost:3000",
+  credentials: true,
+}));
 
 // Development logging
-// In server.js - for development only
 if (process.env.NODE_ENV === "development") {
-  app.use(
-    cors({
-      origin: "http://localhost:3000", // your frontend dev server
-      credentials: true,
-    })
-  );
+  app.use(morgan("dev"));
 }
 
 // API routes
@@ -46,6 +46,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/hello", helloRoutes);
 
 // Serve static assets
 app.use(express.static(path.join(__dirname, "public")));
@@ -69,6 +70,11 @@ app.listen(PORT, () =>
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err, promise) => {
   console.log(`Error: ${err.message}`);
-  // Close server & exit process
-  // server.close(() => process.exit(1));
+  // Optionally: process.exit(1);
+});
+
+// Handle uncaught exceptions
+process.on("uncaughtException", (err) => {
+  console.log(`Error: ${err.message}`);
+  // Optionally: process.exit(1);
 });
