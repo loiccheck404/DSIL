@@ -1027,4 +1027,15 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
     }
   }
+
+  const navLinks = document.querySelectorAll("ul.tabs li a");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      // Remove 'active' from all links
+      navLinks.forEach((l) => l.classList.remove("active"));
+      // Add 'active' to the clicked link
+      this.classList.add("active");
+    });
+  });
 });
